@@ -7,3 +7,4 @@ LTO_ENABLE = yes
 OLED_ENABLE = yes
 OLED_DRIVER = SSD1306
 SRC += encoder.c oled.c rgb.c
+VIA_ENABLE = yes

@@ -45,13 +45,6 @@ static void print_status_narrow(void) {
         case _QWERTY:
             oled_write_ln_P(PSTR("Qwrt"), false);
             break;
-        case _COLEMAK:
-            oled_write_ln_P(PSTR("Clmk"), false);
-            break;
-        case _COLEMAKDH:
-            oled_write_ln_P(PSTR("CmkDH"), false);
-            break;
-
         default:
             oled_write_ln_P(PSTR("Undef"), false);
     }
@@ -59,9 +52,7 @@ static void print_status_narrow(void) {
     // Print current layer
     oled_write_ln_P(PSTR("LAYER"), false);
     switch (get_highest_layer(layer_state)) {
-        case _COLEMAK:
         case _QWERTY:
-        case _COLEMAKDH:
             oled_write_P(PSTR("Base\n"), false);
             break;
         case _RAISE:
@@ -72,13 +63,6 @@ static void print_status_narrow(void) {
             break;
         case _ADJUST:
             oled_write_P(PSTR("Adj\n"), false);
-            break;
-        case _NUMPAD:
-            oled_write_P(PSTR("Nump\n"), false);
-            break;
-        case _SWITCH:
-            oled_write_P(PSTR("Swit\n"), false);
-            break;
         default:
             oled_write_ln_P(PSTR("Undef"), false);
     }

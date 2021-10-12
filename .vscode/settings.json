@@ -6,7 +6,13 @@
     "files.exclude": {
         "**/.build": true,
         "**/*.hex": true,
-        "**/*.bin": true
+        "**/*.bin": true,
+        "keyboards/[0-jl-rt-z]**": true,
+        "keyboards/k[0-df-z]**": true,
+        "keyboards/ke[0-df-z]**": true,
+        "keyboards/keeb[0-hj-z]**": true,
+        "keyboards/s[0-np-z]**": true,
+        "keyboards/so[g-z]**": true,
     },
     "files.associations": {
         "*.h": "c",
@@ -26,5 +32,6 @@
     "python.formatting.provider": "yapf",
     "[json]": {
 	    "editor.formatOnSave": false
-    }
+    },
+    "C_Cpp.dimInactiveRegions": false
 }

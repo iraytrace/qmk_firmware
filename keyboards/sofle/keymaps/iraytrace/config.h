@@ -30,8 +30,10 @@ for more options.
 #define RGBLED_NUM 36    // Number of LEDs
 #define DRIVER_LED_TOTAL RGBLED_NUM
 #endif
-#define RGBLED_NUM 70
-#define RGBLED_SPLIT {36,36}
+
+#define RGBLIGHT_LAYERS
+#define RGBLED_NUM 58
+#define RGBLED_SPLIT {29,29}
 #define RGBLIGHT_ANIMATIONS
 #define RGBLIGHT_LIMIT_VAL 120
 #define RGBLIGHT_HUE_STEP 10

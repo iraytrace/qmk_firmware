@@ -44,7 +44,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE 5
-
+#define BACKLIGHT_LEVELS 7
 #define BACKLIGHT_PIN B5
 #define CAPS_LOCK_LED_PIN B6
 

@@ -1,5 +1,5 @@
- /* Copyright 2020 Josef Adamcik
-  * Modification for VIA support and RGB underglow by Jens Bonk-Wiltfang
+
+ /* Copyright 2021 Dane Evans
   *
   * This program is free software: you can redistribute it and/or modify
   * it under the terms of the GNU General Public License as published by
@@ -14,14 +14,13 @@
   * You should have received a copy of the GNU General Public License
   * along with this program.  If not, see <http://www.gnu.org/licenses/>.
   */
+  // SOFLE RGB
+#include <stdio.h>
 
-//Setting up what encoder rotation does. If your encoder can be pressed as a button, that function can be set in Via.
 #include QMK_KEYBOARD_H
-
 #ifdef ENCODER_ENABLE
 
-bool encoder_update_user(uint8_t index, bool clockwise)
-{
+bool encoder_update_user(uint8_t index, bool clockwise) {
     if (index) {
         if (clockwise) {
             tap_code(KC_WH_U);

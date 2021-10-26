@@ -28,10 +28,10 @@
 // Light combinations
 #define SET_INDICATORS(hsv) \
 	{0, 1, HSV_OVERRIDE_HELP(hsv, INDICATOR_BRIGHTNESS)}, \
-    {35+0, 1, hsv}
+    {7+0, 1, hsv}
 #define SET_UNDERGLOW(hsv) \
 	{1, 6, hsv}, \
-    {35+1, 6,hsv}
+    {7+1, 6,hsv}
 #define SET_NUMPAD(hsv)     \
 	{35+15, 5, hsv},\
 	  {35+22, 3, hsv},\
@@ -57,7 +57,7 @@
 // 4 leds starting at poisition 0 are constant.  Others animate
 #define SET_LAYER_ID(hsv) 	\
 		{0, 1, hsv}, \
-    {29+0, 1, hsv}\
+    {7+0, 1, hsv}\
 
       /*, \
       		{7, 4, hsv}, \
@@ -70,37 +70,32 @@
 char layer_state_str[70];
 // Now define the array of layers. Later layers take precedence
 
+#define HSV_LOWGREEN 85, 255, 64
+#define HSV_MIDGREEN 85, 255, 127
+
 // QWERTY,
 // Light on inner column and underglow
 const rgblight_segment_t PROGMEM layer_qwerty_lights[] = RGBLIGHT_LAYER_SEGMENTS(
-  SET_LAYER_ID(HSV_GOLD)
+  SET_LAYER_ID(HSV_MIDGREEN)
 
 );
 const rgblight_segment_t PROGMEM layer_lower_lights[] = RGBLIGHT_LAYER_SEGMENTS(
-  SET_LAYER_ID(HSV_TEAL)
+  SET_LAYER_ID(HSV_RED)
 );
 
 //_NUMPAD
 const rgblight_segment_t PROGMEM layer_raise_lights[] = RGBLIGHT_LAYER_SEGMENTS(
-	SET_INDICATORS(HSV_ORANGE),
-    SET_UNDERGLOW(HSV_ORANGE),
-	SET_NUMPAD(HSV_BLUE),
-    {7, 4, HSV_ORANGE},
-    {25, 2, HSV_ORANGE},
-    {35+6, 4, HSV_ORANGE},
-    {35+25, 2, HSV_ORANGE}
-    );
+  SET_LAYER_ID(HSV_BLUE)
+);
 // _SWITCHER   // light up top row
 const rgblight_segment_t PROGMEM layer_adjust_lights[] = RGBLIGHT_LAYER_SEGMENTS(
-	SET_LAYER_ID(HSV_GREEN),
-	SET_NUMROW(HSV_GREEN)
+  SET_LAYER_ID(HSV_WHITE)
 );
 
 const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
-
     layer_qwerty_lights,
 	layer_lower_lights,
-    layer_raise_lights,// overrides layer 1
+    layer_raise_lights,
 	layer_adjust_lights
 );
 

@@ -70,11 +70,11 @@
 char layer_state_str[70];
 // Now define the array of layers. Later layers take precedence
 
-#define HSV_LOWGREEN 85, 255, 64
-#define HSV_MIDGREEN 85, 255, 127
-#define HSV_LOWRRED   0, 255, 127
-#define HSV_LOWBLUE 170, 255, 127
-#define HSV_GREY      0,   0, 127
+#define HSV_LOWGREEN 85, 255, 32
+#define HSV_MIDGREEN 85, 255, 64
+#define HSV_LOWRRED   0, 255, 64
+#define HSV_LOWBLUE 170, 255, 64
+#define HSV_GREY      0,   0, 64
 
 // QWERTY,
 // Light on inner column and underglow

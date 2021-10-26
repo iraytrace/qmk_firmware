@@ -53,15 +53,6 @@ static const struct lockstr {
 };
 
 static void print_status_narrow(void) {
-    // Print current mode
-    //oled_write_P(PSTR("\n\n"), false);
-    // oled_write_ln_P(PSTR("Dane\nEvans"), false);
-
-    //oled_write_ln_P(PSTR(""), false);
-
-	//snprintf(layer_state_str, sizeof(layer_state_str), "Layer: Undef-%ld", layer_state)
-
-
     switch (get_highest_layer(default_layer_state)) {
         case _QWERTY:
             oled_write_ln_P(PSTR("Qwrt"), false);
@@ -96,22 +87,13 @@ static void print_status_narrow(void) {
     }
 
     uint8_t leds = host_keyboard_leds();
-    if (leds & (1<<USB_LED_CAPS_LOCK) ) {
-        oled_write_ln(locks[0].str, false);
-    } else {
-        oled_write_ln_P(PSTR(""), false);
+    for (int lck_num =0 ; lck_num < LOCKCOUNT ; lck_num++) {
+        if (leds & (1<<  lck_num) ) {
+            oled_write_ln(locks[lck_num].str, false);
+        } else {
+            oled_write_ln_P(PSTR(""), false);
+        }
     }
-    if (leds & (1<<USB_LED_NUM_LOCK)) {
-        oled_write_ln(locks[1].str, false);
-    } else {
-        oled_write_ln_P(PSTR(""), false);
-    }
-    if (leds & (1<<USB_LED_SCROLL_LOCK)) {
-        oled_write_ln(locks[2].str, false);
-    } else {
-        oled_write_ln_P(PSTR(""), false);
-    }
-
 }
 
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {

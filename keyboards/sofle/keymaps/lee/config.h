@@ -23,8 +23,8 @@
 ///https://thomasbaart.nl/2018/12/01/reducing-firmware-size-in-qmk/
 
 
-#define MASTER_LEFT
-// #define MASTER_RIGHT
+// #define MASTER_LEFT
+#define MASTER_RIGHT
 // #define EE_HANDS
 
 #define CUSTOM_FONT
@@ -68,9 +68,9 @@
 	//#define RGBLIGHT_EFFECT_ALTERNATING
 	//#define RGBLIGHT_EFFECT_TWINKLE
 
-    #define RGBLED_NUM 58
+    #define RGBLED_NUM 14
 	//#define RGBLED_SPLIT
-	#define RGBLED_SPLIT { 29, 29 } // haven't figured out how to use this yet
+	#define RGBLED_SPLIT { 7, 7 } // haven't figured out how to use this yet
 
 	//#define RGBLED_NUM 30
     #define RGBLIGHT_LIMIT_VAL 120
@@ -99,8 +99,8 @@
 /* Disable the animations you don't want/need.  You will need to disable a good number of these    *
  * because they take up a lot of space.  Disable until you can successfully compile your firmware. */
 // #   define DISABLE_RGB_MATRIX_ALPHAS_MODS
-// #   define DISABLE_RGB_MATRIX_GRADIENT_UP_DOWN
-// #   define DISABLE_RGB_MATRIX_BREATHING
+ #   define DISABLE_RGB_MATRIX_GRADIENT_UP_DOWN
+ #   define DISABLE_RGB_MATRIX_BREATHING
 // #   define DISABLE_RGB_MATRIX_CYCLE_ALL
 // #   define DISABLE_RGB_MATRIX_CYCLE_LEFT_RIGHT
 // #   define DISABLE_RGB_MATRIX_CYCLE_UP_DOWN
@@ -114,7 +114,7 @@
 // #   define DISABLE_RGB_MATRIX_JELLYBEAN_RAINDROPS
 // #   define DISABLE_RGB_MATRIX_TYPING_HEATMAP
 // #   define DISABLE_RGB_MATRIX_DIGITAL_RAIN
-// #   define DISABLE_RGB_MATRIX_SOLID_REACTIVE
+ #   define DISABLE_RGB_MATRIX_SOLID_REACTIVE
 // #   define DISABLE_RGB_MATRIX_SOLID_REACTIVE_SIMPLE
 // #   define DISABLE_RGB_MATRIX_SOLID_REACTIVE_WIDE
 // #   define DISABLE_RGB_MATRIX_SOLID_REACTIVE_MULTIWIDE
